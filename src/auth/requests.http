@@ -1,0 +1,14 @@
+### Sign UP
+POST http://localhost:3000/auth/signup
+Content-Type: application/x-www-form-urlencoded
+
+username=test2@test.com
+&password=Password1!
+
+
+### Sign IN
+POST http://localhost:3000/auth/signin
+Content-Type: application/x-www-form-urlencoded
+
+username=test2@test.com
+&password=Password1!

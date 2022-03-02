@@ -1,0 +1,34 @@
+### Get All Tasks
+GET http://localhost:3000/tasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNjQ2MTQ3OTA2LCJleHAiOjE2NDYxNTE1MDZ9.f_YeoH-Y-YXYHSAG3j8IOHViEjycHceRuVe9qVo1pTM
+
+### Get Task by ID
+GET http://localhost:3000/tasks/3e787a71-31d6-42e0-b4d9-12dc96452d22
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNjQ2MTI4NjgxLCJleHAiOjE2NDYxMzIyODF9.AOfLSGYTe1iMiSYwcxtJENJ1xTgA_b3LcZ0RcnfSv2c
+
+### Get Tasks with filters
+GET http://localhost:3000/tasks
+?status=OPEN
+&search=aje
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNjQ2MTQ3OTA2LCJleHAiOjE2NDYxNTE1MDZ9.f_YeoH-Y-YXYHSAG3j8IOHViEjycHceRuVe9qVo1pTM
+
+
+### Create a Task
+POST http://localhost:3000/tasks
+Content-Type: application/x-www-form-urlencoded
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QyQHRlc3QuY29tIiwiaWF0IjoxNjQ2MTQ3OTA2LCJleHAiOjE2NDYxNTE1MDZ9.f_YeoH-Y-YXYHSAG3j8IOHViEjycHceRuVe9qVo1pTM
+
+title=Yang keempat aje sih
+&description=Jadi Cadangan bos
+
+
+### update task STATUS
+PATCH http://localhost:3000/tasks/f9af6b34-c5df-4cf1-bcd7-4dcea3fef4c9/status
+Content-Type: application/x-www-form-urlencoded
+
+status=IN_PROGRESS
+
+
+### Delete a Task
+DELETE http://localhost:3000/tasks/ade70552-bca8-48c1-824e-954a6fb6d40d
+Content-Type: application/x-www-form-urlencoded
